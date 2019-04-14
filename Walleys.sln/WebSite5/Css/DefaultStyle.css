@@ -1,0 +1,17 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    background:url("../Images/background-balance-business-583846.jpg");
+    background-size:cover;
+}
+.container{
+    text-align:center;
+}
+.carousel{
+    width:200px;height:200px;
+    margin:auto;
+}
+.carousel-inner > .item > img, .carousel-inner > .item >a> img,{
+    width:100%;
+    margin:auto;
+}

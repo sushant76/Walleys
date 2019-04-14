@@ -1,0 +1,198 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    
+    <title></title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css" />    
+    <link href="css/Dashboard.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <asp:ContentPlaceHolder id="head" runat="server">
+        <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+     <script type="text/javascript">
+          $(document).ready(function ()
+          {              $("#btnSlideToggle").click(function ()
+              {
+                  $("#login_wrapper").slideToggle();
+                  return false;
+              });
+          });
+        </script>
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        #div1 {
+       position:relative;
+       padding-left:100px;
+       }
+        .auto-style6 {
+            background: #212121;
+            border-right: 1px solid #e5e5e5;
+            position: absolute;
+            top: 0;
+            bottom: 85px;
+            height: 99%;
+            left: 0;
+            width: 60px;
+            overflow: hidden;
+            -webkit-transition: width .05s linear;
+            transition: width .05s linear;
+            -webkit-transform: translateZ(0) scale(1,1);
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+
+
+<body>
+    <div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" id="div1">
+  <a class="navbar-brand" href="Default.aspx">WALLEYS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="Main.aspx">Home<span class="sr-only">(current)</span></a>
+      </li>
+  
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+         <li class="nav-item">
+        <a class="nav-link " href="#">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " href="Logout.aspx">Logout</a>
+      </li>
+    </ul>
+   
+  </div>
+</nav>
+    </div>
+    <br />
+    <br />
+
+    <div class="area"></div><nav class="main-menu">
+            <ul>
+                <li>
+                    <a href="Main.aspx">
+                        <i class="fa fa-home fa-2x"></i>
+                        <span class="nav-text">
+                           Home
+                        </span>
+                    </a>
+                  
+                </li>
+                <li class="has-subnav">
+                    <a href="MyDoc.aspx">
+                        <i class="fa fa-laptop fa-2x"></i>
+                        <span class="nav-text">
+                           My Doc
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="Fees.aspx">
+                       <i class="fa fa-list fa-2x"></i>
+                        <span class="nav-text">
+                           Fee Structures
+                        </span>
+                    </a>
+                    
+                </li>
+                <li class="has-subnav">
+                    <a href="LinkedWallet.aspx">
+                       <i class="fa fa-folder-open fa-2x"></i>
+                        <span class="nav-text">
+                           Linked Wallets 
+                        </span>
+                    </a>
+                   
+                </li>
+                <li>
+                    <a href="Payment.aspx">
+                        <i class="fa fa-bar-chart-o fa-2x"></i>
+                        <span class="nav-text">
+                           Payment
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa fa-font fa-2x"></i>
+                        <span class="nav-text">
+                            Notification
+                        </span>
+                    </a>
+                </li>
+                <li>
+                   <a href="#">
+                       <i class="fa fa-table fa-2x"></i>
+                        <span class="nav-text">
+                           Forms
+                        </span>
+                    </a>                </li>
+                <li>
+                   <a href="#">
+                        <i class="fa fa-map-marker fa-2x"></i>
+                        <span class="nav-text">
+                            Maps
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                       <i class="fa fa-info fa-2x"></i>
+                        <span class="nav-text">
+                            Documentation
+                        </span>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="logout">
+                <li>
+                   <a href="Logout.aspx">
+                         <i class="fa fa-power-off fa-2x"></i>
+                        <span class="nav-text">
+                            Logout
+                        </span>
+                    </a>
+                </li>  
+            </ul>
+        </nav>
+   
+
+    <form id="form1" runat="server">
+    
+        <br />
+        <br />
+      
+    <div style="max-height:inherit;max-width:inherit;overflow:auto;padding-left:300px"   >
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server" >     
+      
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
